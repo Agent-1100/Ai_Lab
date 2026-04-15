@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | AI Research Lab</title>
+  <meta name="description" content="About the AI research lab and website structure." />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AI Research Lab home">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <rect x="6" y="6" width="52" height="52" rx="18" stroke="currentColor" stroke-width="4"/>
+  <path d="M20 40L31 18L42 40" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 32H38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="46" cy="20" r="4" fill="currentColor"/>
+</svg>
+      <span>AI Research Lab</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="">Home</a>
+<a href="members.html" class="">Our Members</a>
+<a href="achievements.html" class="">Achievements</a>
+<a href="about.html" class="active">About</a>
+    </nav>
+    <div class="actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+  <main id="main-content">
+<div class="container page-hero">
+  <span class="eyebrow">About the Lab</span>
+  <h1 class="page-title">A flexible structure for a modern AI research group.</h1>
+  <p class="lead" style="margin-top: var(--space-4); max-width: 62ch;">This version separates the site into multiple HTML pages while keeping shared branding, shared styles, and shared navigation across the whole website.</p>
+</div>
+<div class="container">
+  <section>
+    <div class="grid feature-grid">
+      <article class="feature-card">
+        <h3>Suggested sections to add next</h3>
+        <ul class="list">
+          <li>Research themes for NLP, vision, robotics, theory, or domain AI areas.</li>
+          <li>Projects pages with demos, GitHub links, datasets, and benchmarks.</li>
+          <li>Join the lab page with application information and open positions.</li>
+          <li>Events pages for reading groups, seminars, workshops, and deadlines.</li>
+          <li>Media kit with logos, team photos, and citation details.</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <h3>Why the multi-page structure helps</h3>
+        <ul class="list">
+          <li>Each member can now have a real standalone profile URL.</li>
+          <li>GitHub Pages works naturally with this file structure.</li>
+          <li>Shared CSS and JavaScript reduce repetition and simplify edits.</li>
+          <li>It will be easier to scale into a larger lab website later.</li>
+          <li>You can still convert this into a CMS or framework project later.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</div>
+</main>
+  <footer class="footer">
+  <div class="container footer-inner">
+    <p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p>
+    <p>Multi-page static site with shared navigation, member profiles, and DOI-ready publication cards.</p>
+  </div>
+</footer>
+<script src="assets/script.js" defer></script>
+</body>
+</html>
