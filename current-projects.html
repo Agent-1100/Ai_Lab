@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Projects | AI Research Lab</title>
+  <meta name="description" content="Current research projects at the AI Research Lab." />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="AI Research Lab home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect x="6" y="6" width="52" height="52" rx="18" stroke="currentColor" stroke-width="4"/><path d="M20 40L31 18L42 40" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32H38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="46" cy="20" r="4" fill="currentColor"/></svg>
+        <span>AI Research Lab</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="members.html" class="">Who We Are</a>
+        <a href="student-members.html">Student Members</a>
+        <a href="current-projects.html" class="active">Current Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    <div class="container page-hero">
+      <span class="eyebrow">Current Projects</span>
+      <h1 class="page-title">Ongoing work across ideas, implementation, and publication.</h1>
+      <p class="lead" style="margin-top: var(--space-4); max-width: 62ch;">This page highlights active projects, their goals, status, and expected outputs so visitors can quickly understand what the lab is building right now.</p>
+    </div>
+    <div class="container">
+      <section>
+        <div class="grid project-grid">
+          <article class="project-card">
+            <span class="tag">In Progress</span>
+            <h3 style="margin-top: var(--space-3);">AI Agent for Scientific Literature Review</h3>
+            <p style="margin-top: var(--space-3);" class="muted">Developing an agentic pipeline that searches papers, extracts evidence, and assists with structured literature synthesis for manuscripts and grants.</p>
+            <div class="project-meta"><span>Theme: Scientific AI</span><span>Output: Journal paper + demo</span></div>
+          </article>
+          <article class="project-card">
+            <span class="tag">Benchmark</span>
+            <h3 style="margin-top: var(--space-3);">Edge-Case Evaluation for Multimodal Models</h3>
+            <p style="margin-top: var(--space-3);" class="muted">Creating a benchmark suite to test failure cases, out-of-distribution behavior, and robustness in vision-language systems.</p>
+            <div class="project-meta"><span>Theme: Reliability</span><span>Output: Conference submission</span></div>
+          </article>
+          <article class="project-card">
+            <span class="tag">Prototype</span>
+            <h3 style="margin-top: var(--space-3);">Medical AI Decision Support Explorer</h3>
+            <p style="margin-top: var(--space-3);" class="muted">Building an explainable interface for testing model behavior on biomedical and clinical case scenarios with evidence tracing.</p>
+            <div class="project-meta"><span>Theme: Healthcare AI</span><span>Output: Prototype + preprint</span></div>
+          </article>
+          <article class="project-card">
+            <span class="tag">Writing</span>
+            <h3 style="margin-top: var(--space-3);">Reproducible Experiment Tracking Framework</h3>
+            <p style="margin-top: var(--space-3);" class="muted">Standardizing the way the lab stores datasets, code versions, ablations, and manuscript-ready result summaries.</p>
+            <div class="project-meta"><span>Theme: Research Ops</span><span>Output: Methods paper</span></div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p><p>Current projects page for ongoing lab work and research directions.</p></div></footer>
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
