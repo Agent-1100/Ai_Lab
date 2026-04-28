@@ -26,7 +26,7 @@ if (menuToggle && nav) {
   });
 }
 
-const slides = document.querySelectorAll('.slide');
+/*const slides = document.querySelectorAll('.slide');
 if (slides.length > 1) {
   let currentSlide = 0;
   setInterval(() => {
@@ -34,6 +34,67 @@ if (slides.length > 1) {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
   }, 3500);
+}*/
+
+const carousel = document.getElementById('heroCarousel');
+if (carousel) {
+  const slides = carousel.querySelectorAll('.slide');
+  const dots = carousel.querySelectorAll('.dot');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  let currentSlide = 0;
+  let autoplay;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      if (dots[i]) dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function prevSlide() {
+    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
+  }
+
+  function startAutoplay() {
+    autoplay = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplay);
+    startAutoplay();
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      resetAutoplay();
+    });
+  });
+
+  showSlide(0);
+  startAutoplay();
 }
 
 // SCROLL REVEAL FOR MEMBER CARDS - NEW
@@ -50,5 +111,52 @@ function initScrollAnimations() {
     observer.observe(card);
   });
 }
+
+const counters = document.querySelectorAll('.count-up');
+
+const animateCounter = (el) => {
+  const target = Number(el.dataset.target || 0);
+  const duration = 1400;
+  const startTime = performance.now();
+
+  const update = (currentTime) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+
+    el.textContent = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target;
+    }
+  };
+
+  requestAnimationFrame(update);
+};
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    const counter = entry.target;
+
+    if (!counter.dataset.animated) {
+      counter.dataset.animated = "true";
+      animateCounter(counter);
+    }
+
+    obs.unobserve(counter);
+  });
+}, {
+  threshold: 0.5
+});
+
+counters.forEach((counter) => observer.observe(counter));
+
+
+
 
 document.addEventListener('DOMContentLoaded', initScrollAnimations);
