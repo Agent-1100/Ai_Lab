@@ -245,6 +245,139 @@ main {
   padding-bottom: var(--space-20);
 }
 
+/* Header CTA */
+.header-cta {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-cta:hover,
+.header-cta:focus-visible {
+  background: linear-gradient(135deg, var(--color-primary-hover), var(--color-primary-active));
+  color: var(--color-text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.header-cta:active {
+  transform: translateY(0);
+  background: var(--color-primary-active);
+}
+
+/* Join Us page */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.membership-card {
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.membership-card-header {
+  padding: var(--space-5);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 75%, transparent);
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+}
+
+.membership-card-header h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.membership-card-header p {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.perks-list {
+  list-style: none;
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.perks-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.perks-list li::before {
+  content: "✓";
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-primary) 14%, var(--color-surface));
+  color: var(--color-primary);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Contact page */
+.contact-card {
+  max-width: 760px;
+  margin: var(--space-8) auto 0;
+  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.contact-image-wrap {
+  background: var(--color-surface-2);
+}
+
+.contact-image-wrap img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--color-surface-2);
+}
+
+.contact-details {
+  padding: var(--space-6);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.contact-details p,
+.contact-details a {
+  color: var(--color-text-muted);
+}
+
+.contact-details a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.contact-details a:hover {
+  color: var(--color-primary-hover);
+}
+
+
+
 /*.hero.container {
   width: min(calc(100% - 2rem), 1360px);
 }*/
@@ -965,6 +1098,24 @@ section {
     grid-template-columns: 1fr;
   }
 
+@media (max-width: 960px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-cta {
+    min-height: 44px;
+    padding: 0 var(--space-4);
+  }
+}
+
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1096,4 +1247,16 @@ section {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Full-width header with no outer margin */
+.header .container {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.header-inner {
+  width: 100%;
 }

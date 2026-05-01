@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | AI Research Lab</title>
-  <meta name="description" content="About the AI research lab and website structure." />
+  <title>Contact Us | AI Research Lab</title>
+  <meta name="description" content="Contact information for the AI Research Lab." />
+  <meta name="theme-color" content="#0c6dfd" />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +14,8 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-<header class="header">
+
+  <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="AI Research Lab home">
         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
@@ -35,8 +37,8 @@
         <a href="student-members.html">Student Members</a>
         <a href="current-projects.html">Current Projects</a>
         <a href="achievements.html">Achievements</a>
-        <a href="about.html" class="active">About</a>
-        <a href="contact_us.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="contact_us.html" class="active">Contact Us</a>
       </nav>
 
       <div class="actions">
@@ -49,45 +51,42 @@
       </div>
     </div>
   </header>
+
   <main id="main-content">
-<div class="container page-hero">
-  <span class="eyebrow">About the Lab</span>
-  <h1 class="page-title">A flexible structure for a modern AI research group.</h1>
-  <p class="lead" style="margin-top: var(--space-4); max-width: 62ch;">This version separates the site into multiple HTML pages while keeping shared branding, shared styles, and shared navigation across the whole website.</p>
-</div>
-<div class="container">
-  <section>
-    <div class="grid feature-grid">
-      <article class="feature-card">
-        <h3>Suggested sections to add next</h3>
-        <ul class="list">
-          <li>Research themes for NLP, vision, robotics, theory, or domain AI areas.</li>
-          <li>Projects pages with demos, GitHub links, datasets, and benchmarks.</li>
-          <li>Join the lab page with application information and open positions.</li>
-          <li>Events pages for reading groups, seminars, workshops, and deadlines.</li>
-          <li>Media kit with logos, team photos, and citation details.</li>
-        </ul>
-      </article>
-      <article class="feature-card">
-        <h3>Why the multi-page structure helps</h3>
-        <ul class="list">
-          <li>Each member can now have a real standalone profile URL.</li>
-          <li>GitHub Pages works naturally with this file structure.</li>
-          <li>Shared CSS and JavaScript reduce repetition and simplify edits.</li>
-          <li>It will be easier to scale into a larger lab website later.</li>
-          <li>You can still convert this into a CMS or framework project later.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-</div>
-</main>
+    <section class="page-hero">
+      <div class="container stack">
+        <p class="eyebrow">Contact</p>
+        <h1 class="page-title">Reach the lab through the contact details below.</h1>
+        <p class="section-copy">
+          Use the email address for collaborations, membership inquiries, project discussions, or general communication.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <article class="contact-card">
+          <div class="contact-image-wrap">
+            <img src="assets/contact-info.jpg" alt="Contact information for AI Research Lab" />
+          </div>
+
+          <div class="contact-details">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:info@airesearchlab.org">info@airesearchlab.org</a></p>
+            <p>For membership queries, mention whether you are applying as a Contributor, Advisor, or Student Member.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
-  <div class="container footer-inner">
-    <p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p>
-    <p>Multi-page static site with shared navigation, member profiles, and DOI-ready publication cards.</p>
-  </div>
-</footer>
-<script src="assets/script.js" defer></script>
+    <div class="container footer-inner">
+      <p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p>
+      <p>Multi-page static site with shared navigation, member profiles, and DOI-ready publication cards.</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
