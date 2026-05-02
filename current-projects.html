@@ -13,6 +13,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="AI Research Lab home">
@@ -49,44 +50,126 @@
       </div>
     </div>
   </header>
+
   <main id="main-content">
     <div class="container page-hero">
       <span class="eyebrow">Current Projects</span>
       <h1 class="page-title">Ongoing work across ideas, implementation, and publication.</h1>
-      <p class="lead" style="margin-top: var(--space-4); max-width: 62ch;">This page highlights active projects, their goals, status, and expected outputs so visitors can quickly understand what the lab is building right now.</p>
+      <p class="lead" style="margin-top: var(--space-4); max-width: 62ch;">
+        This page highlights active projects, their goals, status, and expected outputs so visitors can quickly understand what the lab is building right now.
+      </p>
     </div>
+
     <div class="container">
       <section>
         <div class="grid project-grid">
-          <article class="project-card">
-            <span class="tag">In Progress</span>
-            <h3 style="margin-top: var(--space-3);">AI Agent for Scientific Literature Review</h3>
-            <p style="margin-top: var(--space-3);" class="muted">Developing an agentic pipeline that searches papers, extracts evidence, and assists with structured literature synthesis for manuscripts and grants.</p>
-            <div class="project-meta"><span>Theme: Scientific AI</span><span>Output: Journal paper + demo</span></div>
-          </article>
-          <article class="project-card">
-            <span class="tag">Benchmark</span>
-            <h3 style="margin-top: var(--space-3);">Edge-Case Evaluation for Multimodal Models</h3>
-            <p style="margin-top: var(--space-3);" class="muted">Creating a benchmark suite to test failure cases, out-of-distribution behavior, and robustness in vision-language systems.</p>
-            <div class="project-meta"><span>Theme: Reliability</span><span>Output: Conference submission</span></div>
-          </article>
-          <article class="project-card">
-            <span class="tag">Prototype</span>
-            <h3 style="margin-top: var(--space-3);">Medical AI Decision Support Explorer</h3>
-            <p style="margin-top: var(--space-3);" class="muted">Building an explainable interface for testing model behavior on biomedical and clinical case scenarios with evidence tracing.</p>
-            <div class="project-meta"><span>Theme: Healthcare AI</span><span>Output: Prototype + preprint</span></div>
-          </article>
-          <article class="project-card">
-            <span class="tag">Writing</span>
-            <h3 style="margin-top: var(--space-3);">Reproducible Experiment Tracking Framework</h3>
-            <p style="margin-top: var(--space-3);" class="muted">Standardizing the way the lab stores datasets, code versions, ablations, and manuscript-ready result summaries.</p>
-            <div class="project-meta"><span>Theme: Research Ops</span><span>Output: Methods paper</span></div>
-          </article>
+          <a class="project-link-card" href="scientific-literature-publications.html" aria-label="View publications for AI Agent for Scientific Literature Review">
+            <article class="project-card">
+              <img
+                src="assets/project-1.jpg"
+                alt="Scientific literature review workflow and paper analysis interface"
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="520"
+              />
+              <div class="project-card-content">
+                <span class="tag">In Progress</span>
+                <h3>AI Agent for Scientific Literature Review</h3>
+                <p class="muted">
+                  Developing an agentic pipeline that searches papers, extracts evidence, and assists with structured literature synthesis for manuscripts and grants.
+                </p>
+                <div class="project-meta">
+                  <span>Theme: Scientific AI</span>
+                  <span>Output: Journal paper + demo</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <a class="project-link-card" href="multimodal-publications.html" aria-label="View publications for Edge-Case Evaluation for Multimodal Models">
+            <article class="project-card">
+              <img
+                src="assets/project-2.jpg"
+                alt="Evaluation dashboard for multimodal model edge cases"
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="520"
+              />
+              <div class="project-card-content">
+                <span class="tag">Benchmark</span>
+                <h3>Edge-Case Evaluation for Multimodal Models</h3>
+                <p class="muted">
+                  Creating a benchmark suite to test failure cases, out-of-distribution behavior, and robustness in vision-language systems.
+                </p>
+                <div class="project-meta">
+                  <span>Theme: Reliability</span>
+                  <span>Output: Conference submission</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <a class="project-link-card" href="medical-ai-publications.html" aria-label="View publications for Medical AI Decision Support Explorer">
+            <article class="project-card">
+              <img
+                src="assets/project-3.jpg"
+                alt="Medical AI decision support interface with evidence tracing"
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="520"
+              />
+              <div class="project-card-content">
+                <span class="tag">Prototype</span>
+                <h3>Medical AI Decision Support Explorer</h3>
+                <p class="muted">
+                  Building an explainable interface for testing model behavior on biomedical and clinical case scenarios with evidence tracing.
+                </p>
+                <div class="project-meta">
+                  <span>Theme: Healthcare AI</span>
+                  <span>Output: Prototype + preprint</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <a class="project-link-card" href="experiment-tracking-publications.html" aria-label="View publications for Reproducible Experiment Tracking Framework">
+            <article class="project-card">
+              <img
+                src="assets/project-4.jpg"
+                alt="Research experiment tracking system with datasets and result summaries"
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="520"
+              />
+              <div class="project-card-content">
+                <span class="tag">Writing</span>
+                <h3>Reproducible Experiment Tracking Framework</h3>
+                <p class="muted">
+                  Standardizing the way the lab stores datasets, code versions, ablations, and manuscript-ready result summaries.
+                </p>
+                <div class="project-meta">
+                  <span>Theme: Research Ops</span>
+                  <span>Output: Methods paper</span>
+                </div>
+              </div>
+            </article>
+          </a>
         </div>
       </section>
     </div>
   </main>
-  <footer class="footer"><div class="container footer-inner"><p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p><p>Current projects page for ongoing lab work and research directions.</p></div></footer>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>AI Research Lab — collaborative research in ideas, implementation, and publication.</p>
+      <p>Current projects page for ongoing lab work and research directions.</p>
+    </div>
+  </footer>
+
   <script src="assets/script.js" defer></script>
 </body>
 </html>
